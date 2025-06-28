@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ishlab chiqarish</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+
+    .back-button-icon {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+
+  width: 45px;
+  height: 45px;
+  background-color: #000;
+  color: white;
+  font-size: 22px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+.back-button-icon:hover {
+  background-color: #444;
+}
+
+  </style>
+
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md py-4 px-8 flex items-center justify-between">
+    <img src="images/logo.png" alt="Logo" class="h-12">
+    <h1 class="text-3xl font-bold text-[#208aad]">Kompaniyamiz Haqida</h1>
+  </header>
+<button class="back-button-icon" onclick="history.back()">
+  &#8592;
+</button>
+
+  <!-- Rahbar haqida -->
+  <section class="max-w-6xl mx-auto mt-10 bg-white p-6 rounded-xl shadow-md grid grid-cols-1 md:grid-cols-2 gap-6">
+    <img src="images/rahbar.jpg" alt="Rahbar" class="rounded-xl shadow-md">
+    <div>
+      <h2 class="text-2xl font-bold mb-4">Kompaniya rahbari</h2>
+      <p class="text-gray-700 leading-relaxed">
+        Kompaniyamiz asoschisi va rahbari <strong>Sayfiddin Yusupov</strong> 15 yildan ortiq tajribaga ega. U kompaniyani xalqaro darajaga olib chiqqan, yangi texnologiyalarni joriy qilgan, yuzlab ishchi o‘rinlari yaratgan va halollikni bosh mezon qilgan inson.
+      </p>
+    </div>
+  </section>
+
+  <!-- Kompaniya haqida -->
+  <section class="max-w-6xl mx-auto mt-10 bg-white p-6 rounded-xl shadow-md">
+    <h2 class="text-2xl font-bold mb-4">Kompaniya haqida</h2>
+    <p class="text-gray-700 leading-loose">
+     SP Polimer Plast — 2015-yilda asos solingan, O‘zbekistonda polimer mahsulotlari ishlab chiqarishga ixtisoslashgan zamonaviy va ishonchli kompaniyalardan biridir. Kompaniya tashkil topgan ilk kundan boshlab, innovatsion yondashuv, sifat va mijoz ehtiyojiga individual e’tibor berish tamoyillariga amal qilib kelmoqda.
+
+Bugungi kunda SP Polimer Plast o‘z faoliyatini keng ko‘lamda yo‘lga qo‘ygan bo‘lib, polietilen paketlar, plastik quvurlar, butilkalar, konteynerlar va boshqa sanoat va maishiy polimer mahsulotlarini ishlab chiqaradi. Mahsulotlarimiz O‘zbekiston bo‘ylab, shuningdek, qo‘shni mamlakatlar bozorlarida ham katta talabga ega.
+
+Kompaniyada faoliyat yuritayotgan malakali muhandislar va texnologlar jamoasi zamonaviy ishlab chiqarish uskunalari yordamida yiliga minglab tonna sifatli mahsulot ishlab chiqaradi. Ishlab chiqarishda xalqaro sifat standartlariga amal qilinadi va har bir mahsulot qat’iy nazoratdan o‘tkaziladi.
+
+SP Polimer Plast kompaniyasi nafaqat mahsulot ishlab chiqarish, balki ekologiyaga bo‘lgan mas’uliyatli munosabati bilan ham ajralib turadi. Ishlab chiqarish jarayonlarida ekologik toza xomashyo ishlatiladi va chiqindilarni minimallashtirish bo‘yicha qat’iy tartibga rioya qilinadi.
+
+Kompaniyamiz mijozlar bilan uzoq muddatli va o‘zaro manfaatli hamkorlikni asosiy qadriyat deb biladi. Biz kichik korxonalar, yirik zavodlar va davlat tashkilotlari bilan samarali hamkorlik qilamiz. Tezkor yetkazib berish, buyurtmalarni aniq va sifatli bajarish, shuningdek, moslashtirilgan dizaynlar asosida mahsulot tayyorlash bizning ustunliklarimizdandir.
+
+SP Polimer Plast — bu zamonaviy yondashuv, barqaror o‘sish, sifatli mahsulot va ishonchli hamkorlik timsoli. Bizning maqsadimiz — nafaqat mahalliy, balki xalqaro bozorda ham raqobatbardosh kompaniyaga aylanish va O‘zbekiston sanoatini yangi bosqichga olib chiqishdir.
+
+
+    </p>
+  </section>
+
+  <!-- Yutuqlar -->
+  <section class="max-w-6xl mx-auto mt-10 bg-white p-6 rounded-xl shadow-md">
+    <h2 class="text-2xl font-bold mb-6 text-center">Erishgan yutuqlarimiz</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div>
+        <p class="text-4xl font-bold text-[#208aad]">15+</p>
+        <p>yillik tajriba</p>
+      </div>
+      <div>
+        <p class="text-4xl font-bold text-[#208aad]">500+</p>
+        <p>mamnun mijozlar</p>
+      </div>
+      <div>
+        <p class="text-4xl font-bold text-[#208aad]">50+</p>
+        <p>ishchilar</p>
+      </div>
+      <div>
+        <p class="text-4xl font-bold text-[#208aad]">10+</p>
+        <p>xalqaro hamkorlik</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Homiylar / Hamkorlar -->
+  <section class="max-w-6xl mx-auto mt-10 bg-white p-6 rounded-xl shadow-md">
+    <h2 class="text-2xl font-bold mb-6 text-center">Bizning hamkorlarimiz</h2>
+    <div class="flex flex-wrap items-center justify-center gap-6">
+      <img src="resources/img/logo-white.png" alt="Partner 1" class="h-16">
+      <img src="https://www.darveco.com.tr/web/image/product.template/98/image_1024?unique=7a54bf6" alt="Partner 2" class="h-16">
+      <img src="https://yt3.googleusercontent.com/hRn9cUrC2RQwR9RCowoEvZZatWYamcvGiYWMJAZYKD_RH0SqkH0BxLmKmxLsW-rJ-cgNaBx_gaI=s900-c-k-c0x00ffffff-no-rj" alt="Partner 3" class="h-16">
+      <img src="https://www.unipack.ru/light_editor_img/images/2022-5-11/file1652171568.jpg" alt="Partner 4" class="h-16">
+         <img src="https://www.qoovee.com/media/companies/logo/Logo_1_fZ0jLbM.png" alt="Partner 4" class="h-16">
+            <img src="https://uztex.pro/static/media/LOGO%20UZTEX.f9d6d9d7.png" alt="Partner 4" class="h-16">
+    </div>
+  </section>
+
+  <!-- Video -->
+<!-- Video -->
+<section class="max-w-6xl mx-auto mt-10 bg-white p-6 rounded-xl shadow-md">
+  <h2 class="text-2xl font-bold mb-4 text-center">Ishlab chiqarish jarayoni</h2>
+
+  <div class="w-full flex justify-center">
+    <video controls class="w-full max-w-3xl max-h-[500px] object-cover rounded-lg shadow-lg">
+      <source src="videos/ishlab-chiqarish.mp4" type="video/mp4">
+      Brauzeringiz bu videoni qo‘llab-quvvatlamaydi.
+    </video>
+  </div>
+</section>
+
+
+
+
+  <!-- Footer -->
+  <footer class="bg-[#1e293b] text-white py-6 mt-10 text-center">
+    <p>&copy; 2025 M F Team Kompaniyasi. Barcha huquqlar himoyalangan.</p>
+  </footer>
+
+</body>
+</html>

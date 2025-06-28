@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mahsulot 1 - Polimer Truba</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .color-option.active {
+      outline: 3px solid #2563eb;
+    }
+    .size-option.active {
+      background-color: #2563eb;
+      color: white;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-gray-100 to-white min-h-screen font-sans">
+
+  <div class="max-w-5xl mx-auto mt-10 bg-white shadow-2xl rounded-3xl p-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+      <!-- Mahsulot rasmi -->
+      <div class="relative">
+        <img src="resources/img/8.jpg" alt="Polimer Truba" class="rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
+        <span class="absolute top-4 left-4 bg-blue-600 text-white px-4 py-1 rounded-full text-sm">Yangi</span>
+      </div>
+
+      <!-- Mahsulot ma'lumotlari -->
+      <div>
+        <h1 class="text-3xl font-bold text-gray-800 mb-4">Polimer Metrajniy Selofan</h1>
+        
+        <p class="text-gray-600 mb-4 leading-relaxed">
+          Yuqori sifatli bosimga bardoshli polimer truba. Ichki va tashqi suv quvurlari uchun mos. Uzoq muddatli xizmat kafolati mavjud.
+        </p>
+
+      <p><strong>Narxi:</strong> <span style="color:#16a34a;font-weight:bold">120 000 so‘m</span></p>
+
+
+        <!-- Razmerlar -->
+        <div class="mb-4">
+          <p class="font-medium mb-2">Razmer tanlang:</p>
+          <div class="flex gap-2">
+            <button class="size-option border px-4 py-2 rounded-md hover:bg-blue-100 transition-all">50mm</button>
+            <button class="size-option border px-4 py-2 rounded-md hover:bg-blue-100 transition-all">75mm</button>
+            <button class="size-option border px-4 py-2 rounded-md hover:bg-blue-100 transition-all">110mm</button>
+            <button class="size-option border px-4 py-2 rounded-md hover:bg-blue-100 transition-all">160mm</button>
+          </div>
+        </div>
+
+        <!-- Ranglar -->
+        <div class="mb-6">
+          <p class="font-medium mb-2">Rang tanlang:</p>
+          <div class="flex gap-3">
+            <div class="color-option w-7 h-7 rounded-full bg-gray-800 cursor-pointer border border-gray-400"></div>
+            <div class="color-option w-7 h-7 rounded-full bg-orange-500 cursor-pointer border border-gray-400"></div>
+            <div class="color-option w-7 h-7 rounded-full bg-blue-600 cursor-pointer border border-gray-400"></div>
+          </div>
+        </div>
+
+        <!-- Tugma -->
+        <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl shadow-lg transition-all w-full">Sotib olish</button>
+      </div>
+    </div>
+    <!-- Ishlab chiqaruvchi sahifasiga o'tish tugmasi -->
+<a href="ishlab-chiqarish.html">
+  <button class="bg-gray-800 text-white px-5 py-2 rounded-lg hover:bg-gray-700 transition-all mt-6">
+    Ishlab chiqaruvchi
+  </button>
+</a>
+
+  </div>
+   <!-- Ishlab chiqaruvchi sahifasiga o'tish tugmasi -->
+
+  <script>
+    // Rang tanlash
+    document.querySelectorAll('.color-option').forEach((color) => {
+      color.addEventListener('click', () => {
+        document.querySelectorAll('.color-option').forEach(c => c.classList.remove('active'));
+        color.classList.add('active');
+      });
+    });
+
+    // Razmer tanlash
+    document.querySelectorAll('.size-option').forEach((size) => {
+      size.addEventListener('click', () => {
+        document.querySelectorAll('.size-option').forEach(s => s.classList.remove('active'));
+        size.classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
