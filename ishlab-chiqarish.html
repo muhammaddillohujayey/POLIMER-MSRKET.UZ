@@ -33,6 +33,55 @@
 .back-button-icon:hover {
   background-color: #444;
 }
+.navbar {
+  background-color: #0f172a;
+  padding: 16px 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: #38bdf8;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
 
   </style>
 
@@ -44,6 +93,17 @@
     <img src="images/logo.png" alt="Logo" class="h-12">
     <h1 class="text-3xl font-bold text-[#208aad]">Kompaniyamiz Haqida</h1>
   </header>
+  <header class="navbar">
+  <div class="container">
+    <a href="index.html" class="logo">
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">🏠 Bosh sahifa</a>
+      <a href="contact.html">📞 Contact</a>
+    </nav>
+  </div>
+</header>
+
 <button class="back-button-icon" onclick="history.back()">
   &#8592;
 </button>
