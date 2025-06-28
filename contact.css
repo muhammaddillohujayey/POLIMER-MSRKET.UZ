@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at 20% 20%, #0f172a, #020617);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.wrapper {
+  padding: 20px;
+  width: 100%;
+  max-width: 450px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 30px rgba(32, 138, 173, 0.4);
+  border-radius: 20px;
+  padding: 32px 28px;
+  color: white;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #38bdf8;
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.input-box input,
+.input-box select {
+  width: 100%;
+  padding: 14px 12px;
+  border: none;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 15px;
+  border-radius: 12px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-box input:focus,
+.input-box select:focus {
+  box-shadow: 0 0 10px #38bdf8;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  color: #cbd5e1;
+  font-size: 14px;
+  transform: translateY(-50%);
+  transition: 0.3s ease;
+  pointer-events: none;
+}
+
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 10px;
+  font-size: 12px;
+  background-color: #020617;
+  padding: 0 5px;
+  color: #38bdf8;
+}
+
+.btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  background: linear-gradient(135deg, #208aad, #0f799c);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #0e5e75, #0a4b60);
+  transform: scale(1.01);
+}
+
+.status {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 14px;
+  color: #38bdf8;
+}

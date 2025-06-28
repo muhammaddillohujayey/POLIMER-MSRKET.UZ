@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bog‘lanish | SP Polimer Plast</title>
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <div class="card">
+      <h2 class="title">Bog‘lanish Formasi</h2>
+      <form id="contactForm">
+        <div class="input-box">
+          <input type="text" name="fullname" required />
+          <label>Ism va Familiya</label>
+        </div>
+        <div class="input-box">
+          <input type="email" name="email" required />
+          <label>Email</label>
+        </div>
+        <div class="input-box">
+          <input type="tel" name="phone" required />
+          <label>Telefon raqami</label>
+        </div>
+        <div class="input-box">
+          <select name="product" required>
+            <option value="" disabled selected>Mahsulot tanlang</option>
+            <option>Polimer quvur</option>
+            <option>Seryo polimer</option>
+            <option>Qadoqlash</option>
+            <option>Boshqa</option>
+          </select>
+        </div>
+        <button type="submit" class="btn">Yuborish</button>
+        <p id="status" class="status"></p>
+      </form>
+    </div>
+  </div>
+  <script src="contact.js"></script>
+</body>
+</html>
