@@ -14,7 +14,93 @@
 	<title>M F Team Polimer Company</title>
 </head>
 <body>
-	
+	<style>
+/* Font Awesome uchun */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css");
+
+.modern-footer {
+  background: linear-gradient(to right, #0f172a, #1e293b);
+  color: #cbd5e1;
+  padding: 50px 20px 30px;
+  font-family: 'Inter', sans-serif;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 1 1 250px;
+}
+
+.footer-logo {
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.footer-desc {
+  font-size: 14px;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #38bdf8;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #38bdf8;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+  font-size: 22px;
+}
+
+.social-icons a {
+  color: #cbd5e1;
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #38bdf8;
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 15px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+
+	</style>
 	<!-- Heading section -->
 
 	<header>
@@ -396,38 +482,50 @@ SP Polimer Plast — bu zamonaviy yondashuv, barqaror o‘sish, sifatli mahsulot
 	<!-- Form section -->
 
 	<!-- Footer section -->
+<footer class="modern-footer">
+  <div class="footer-inner">
+    <!-- Ustun 1: Kompaniya -->
+    <div class="footer-column">
+      <img src="resources/img/logo-white.png" alt="Logo" class="footer-logo">
+      <p class="footer-desc">SP Polimer Plast 2015-yildan buyon yuqori sifatli polimer mahsulotlar ishlab chiqaruvchi ishonchli kompaniya.</p>
+    </div>
 
-	<footer>
-		<div class="row">
-			<div class="col span-1-of-2">
-				<ul class="footer-nav">
-					<li>
-						<a href="#Biz haqimizda">About us</a>
-					</li>
-					<li>
-						<a href="#">Blog</a>
-					</li>
-					<li>
-						<a href="#">Press</a>
-					</li>
-					<li>
-				
-				</ul>
-			</div>
-			<div class="col span-1-of-2">
-				<ul class="social-icons">
-					<li><a href="#"><i class="ion-social-facebook"></i></a></li>
-					<li><a href="#"><i class="ion-social-twitter"></i></a></li>
-					<li><a href="#"><i class="ion-social-telegram"></i></a></li>
-					<li><a href="#"><i class="ion-social-instagram"></i></a></li>
-					<li><a href="#"><i class="ion-social-googleplus"></i></a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="row">
-			<p>Copyright &copy; 2015 by Omnifood. All rights reserved.</p>
-		</div>
-	</footer>
+    <!-- Ustun 2: Sahifalar -->
+    <div class="footer-column">
+      <h3>Sahifalar</h3>
+      <ul>
+        <li><a href="index.html">🏠 Bosh sahifa</a></li>
+        <li><a href="ishlab-chiqaruvchi.html">🏭 Ishlab chiqarish</a></li>
+        <li><a href="contact.html">📞 Bog‘lanish</a></li>
+      </ul>
+    </div>
+
+    <!-- Ustun 3: Ijtimoiy -->
+    <div class="footer-column">
+      <h3>Aloqa</h3>
+      <div class="social-icons">
+        <a href="https://t.me/username" target="_blank" title="Telegram">
+          <i class="fa-brands fa-telegram"></i>
+        </a>
+        <a href="https://instagram.com/username" target="_blank" title="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="tel:+998901234567" title="Telefon">
+          <i class="fa-solid fa-phone"></i>
+        </a>
+        <a href="mailto:youremail@gmail.com" title="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2024 SP Polimer Plast. Barcha huquqlar himoyalangan.</p>
+  </div>
+</footer>
+
+
 
 	<script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
 	<script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>

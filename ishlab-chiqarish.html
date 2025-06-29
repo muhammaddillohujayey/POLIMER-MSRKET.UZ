@@ -82,6 +82,36 @@
 .nav-links a:hover::after {
   width: 100%;
 }
+.growth-chart-section {
+  padding: 30px 10px;
+  background: linear-gradient(to right, #0f172a, #d6dce6);
+  color: #be1616;
+  text-align: center;
+}
+
+.chart-title h2 {
+  font-size: 20px;
+  color: #38bdf8;
+  margin-bottom: 6px;
+}
+
+.chart-title p {
+  color: #e3d8d8;
+  margin-bottom: 15px;
+  font-size: 13px;
+}
+
+.chart-wrapper {
+  max-width: 600px;
+  height: 300px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
 
   </style>
 
@@ -174,6 +204,14 @@ SP Polimer Plast — bu zamonaviy yondashuv, barqaror o‘sish, sifatli mahsulot
             <img src="https://uztex.pro/static/media/LOGO%20UZTEX.f9d6d9d7.png" alt="Partner 4" class="h-16">
     </div>
   </section>
+<section class="growth-chart-section">
+  <div class="chart-title">
+    <h2>Yilma-yil ishlab chiqarish o‘sishi</h2>
+    <p>SP Polimer Plast kompaniyasining 2015-yildan hozirgacha ishlab chiqargan mahsulot hajmi</p>
+  </div>
+  <canvas id="growthChart"></canvas>
+</section>
+
 
   <!-- Video -->
 <!-- Video -->
@@ -251,6 +289,60 @@ SP Polimer Plast — bu zamonaviy yondashuv, barqaror o‘sish, sifatli mahsulot
     &copy; 2025 SP Polimer Plast. Barcha huquqlar himoyalangan.
   </div>
 </footer>
+<!-- Chart.js kutubxonasi (CDN orqali) -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('growthChart').getContext('2d');
+
+  const growthChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['2015', '2016', '2018', '2020', '2022', '2024'],
+      datasets: [{
+        label: 'Mahsulot hajmi (tonna)',
+        data: [20, 35, 60, 100, 150, 200],
+        backgroundColor: 'rgba(56, 189, 248, 0.2)',
+        borderColor: '#38bdf8',
+        borderWidth: 3,
+        fill: true,
+        tension: 0.4,
+        pointBackgroundColor: '#0ea5e9',
+        pointRadius: 5,
+        pointHoverRadius: 8
+      }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        y: {
+          beginAtZero: true,
+          ticks: {
+            color: '#e2e8f0'
+          },
+          grid: {
+            color: '#334155'
+          }
+        },
+        x: {
+          ticks: {
+            color: '#e2e8f0'
+          },
+          grid: {
+            color: '#334155'
+          }
+        }
+      },
+      plugins: {
+        legend: {
+          labels: {
+            color: '#38bdf8'
+          }
+        }
+      }
+    }
+  });
+</script>
 
 
   <!-- Footer --
