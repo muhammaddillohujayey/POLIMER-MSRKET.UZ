@@ -112,7 +112,12 @@ canvas {
   width: 100% !important;
   height: 100% !important;
 }
-
+#counter {
+  transition: all 0.3s ease-in-out;
+}
+ #stats div {
+    transition: all 0.3s ease-in-out;
+  }
   </style>
 
 </head>
@@ -212,6 +217,35 @@ SP Polimer Plast — bu zamonaviy yondashuv, barqaror o‘sish, sifatli mahsulot
     <canvas id="growthChart"></canvas>
   </div>
 
+</section>
+
+<section class="bg-gray-100 py-16" id="stats">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h2 class="text-4xl font-bold mb-10 text-[#208aad]">Bizning Statistikasimiz</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <div>
+        <div class="text-5xl font-extrabold text-[#208aad]" id="counter1">0</div>
+        <p class="mt-2 text-lg text-gray-600">Yetkazilgan mahsulotlar (dona)</p>
+      </div>
+
+      <div>
+        <div class="text-5xl font-extrabold text-[#208aad]" id="counter2">0</div>
+        <p class="mt-2 text-lg text-gray-600">Yillik ishlab chiqarish (tonna)</p>
+      </div>
+
+      <div>
+        <div class="text-5xl font-extrabold text-[#208aad]" id="counter3">0</div>
+        <p class="mt-2 text-lg text-gray-600">Hamkor kompaniyalar</p>
+      </div>
+
+      <div>
+        <div class="text-5xl font-extrabold text-[#208aad]" id="counter4">0</div>
+        <p class="mt-2 text-lg text-gray-600">Faoliyat boshlangan yil</p>
+      </div>
+
+    </div>
+  </div>
 </section>
 
 
@@ -346,6 +380,69 @@ SP Polimer Plast — bu zamonaviy yondashuv, barqaror o‘sish, sifatli mahsulot
     }
   });
   
+  function animateCounter(id, start, end, duration) {
+    const element = document.getElementById(id);
+    let startTime = null;
+
+    function step(currentTime) {
+      if (!startTime) startTime = currentTime;
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+      const current = Math.floor(progress * (end - start) + start);
+      element.textContent = current.toLocaleString();
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    }
+
+    window.requestAnimationFrame(step);
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    animateCounter("counter", 0, 12400, 2500); // 2.5 sekundda 0 → 12400
+  });
+
+
+let counter = 12400;
+setInterval(() => {
+  counter += 1;
+  document.getElementById("counter1").textContent = counter.toLocaleString();
+}, 10000); // har 10 soniyada 1 ta oshadi
+
+  function animateCounter(id, start, end, duration) {
+    const el = document.getElementById(id);
+    let startTime = null;
+
+    function step(ts) {
+      if (!startTime) startTime = ts;
+      const progress = Math.min((ts - startTime) / duration, 1);
+      const current = Math.floor(progress * (end - start) + start);
+      el.textContent = current.toLocaleString();
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  function startFakeRealtime(id, initial, step, interval) {
+    let value = initial;
+    const el = document.getElementById(id);
+
+    setInterval(() => {
+      value += step;
+      el.textContent = value.toLocaleString();
+    }, interval);
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    animateCounter("counter1", 0, 12400, 2000);
+    animateCounter("counter2", 0, 2400, 2200);
+    animateCounter("counter3", 0, 12, 20);
+    animateCounter("counter4", 2000, 2015, 1500);
+
+    startFakeRealtime("counter1", 12400, 3, 20000);
+    startFakeRealtime("counter2", 2400, 2, 20000);
+    startFakeRealtime("counter3", 130, 1, 200000);
+  });
+
 
 </script>
 
